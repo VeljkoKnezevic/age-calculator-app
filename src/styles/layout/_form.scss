@@ -1,0 +1,44 @@
+@use "../utils/" as u;
+
+.form {
+  display: flex;
+  gap: u.rem(16);
+  width: 100%;
+  border-bottom: 1px solid var(--light-grey);
+  padding-block-end: u.rem(63.5);
+  position: relative;
+
+  &__label {
+    width: 30%;
+    font-weight: 700;
+    font-size: u.rem(12);
+    line-height: u.rem(18);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    /* Grey */
+    color: #716f6f;
+  }
+  &__input {
+    max-width: 100%;
+    padding: u.rem(11) u.rem(15);
+    font-weight: 700;
+    font-size: u.rem(20);
+    line-height: u.rem(30);
+    letter-spacing: 0.01em;
+    color: var(--off-black);
+    margin-block-start: u.rem(4);
+    border: 1px solid var(--light-grey);
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -31.5px;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--purple);
+    border-radius: 50%;
+    border: none;
+    padding: u.rem(10) u.rem(9);
+  }
+}
