@@ -5,12 +5,16 @@
   margin-block-start: u.rem(63.5);
   font-style: italic;
   font-weight: 800;
-  font-size: 56px;
+  font-size: u.rem(56);
   line-height: 110%;
   letter-spacing: -0.02em;
   color: var(--off-black);
 
   span {
     color: var(--purple);
+  }
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(104);
   }
 }

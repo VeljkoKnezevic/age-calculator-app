@@ -8,6 +8,10 @@
   padding-block-end: u.rem(63.5);
   position: relative;
 
+  @include u.breakpoint(large) {
+    gap: u.rem(32);
+  }
+
   &__label {
     width: 30%;
     font-weight: 700;
@@ -15,9 +19,29 @@
     line-height: u.rem(18);
     letter-spacing: 0.25em;
     text-transform: uppercase;
-
-    /* Grey */
     color: #716f6f;
+
+    @include u.breakpoint(large) {
+      width: u.rem(160);
+      font-size: u.rem(14);
+      line-height: u.rem(21);
+      letter-spacing: 0.25em;
+    }
+
+    .error {
+      font-style: italic;
+      font-weight: 400;
+      font-size: u.rem(14);
+      line-height: u.rem(21);
+      letter-spacing: 0;
+      color: var(--light-red);
+      text-transform: lowercase;
+      margin-block-start: u.rem(8);
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
   }
   &__input {
     max-width: 100%;
@@ -29,6 +53,23 @@
     color: var(--off-black);
     margin-block-start: u.rem(4);
     border: 1px solid var(--light-grey);
+    caret-color: var(--purple);
+
+    &:focus {
+      outline-color: var(--purple);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include u.breakpoint(large) {
+      padding: u.rem(12) u.rem(24);
+      font-size: 32px;
+      line-height: 48px;
+      margin-block-start: u.rem(8);
+      letter-spacing: 0.01em;
+    }
   }
 
   &__button {
@@ -40,5 +81,18 @@
     border-radius: 50%;
     border: none;
     padding: u.rem(10) u.rem(9);
+
+    @include u.breakpoint(large) {
+      right: 0;
+      left: auto;
+      transform: none;
+      bottom: -48px;
+      padding: u.rem(25) u.rem(24);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--off-black);
+    }
   }
 }
