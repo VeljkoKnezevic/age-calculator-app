@@ -2,10 +2,8 @@ import React from "react";
 import { intervalToDuration } from "date-fns";
 
 const Display = ({ formData, checkSubmit }) => {
-  const inputDate = new Date(formData.year, formData.month, formData.day);
-
   const displayDate = intervalToDuration({
-    start: inputDate,
+    start: new Date(formData.year, formData.month - 1, formData.day),
     end: new Date(),
   });
 
