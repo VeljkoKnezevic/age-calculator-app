@@ -19,7 +19,7 @@
     line-height: u.rem(18);
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #716f6f;
+    color: var(--smokey-grey);
 
     @include u.breakpoint(large) {
       width: u.rem(160);
@@ -28,7 +28,15 @@
       letter-spacing: 0.25em;
     }
 
-    .error {
+    &__error {
+      color: var(--light-red);
+
+      input {
+        border-color: var(--light-red);
+      }
+    }
+
+    .error-msg {
       font-style: italic;
       font-weight: 400;
       font-size: u.rem(14);
@@ -65,8 +73,8 @@
 
     @include u.breakpoint(large) {
       padding: u.rem(12) u.rem(24);
-      font-size: 32px;
-      line-height: 48px;
+      font-size: u.rem(32);
+      line-height: u.rem(48);
       margin-block-start: u.rem(8);
       letter-spacing: 0.01em;
     }
